@@ -38,8 +38,13 @@ defmodule LiseProjectWeb.PageLive do
   end
 
   def name("Lise Carpenter" = name), do: name
-  def name("Lise" = name), do: name
-
   def name(_anyname), do: :error
 
+  def hello(name) do
+    "Hello #{name}"
+  end
+
+  def hello(:error) do
+    {:error, "something went wrong"}
+  end
 end
