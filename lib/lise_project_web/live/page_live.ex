@@ -52,7 +52,9 @@ defmodule LiseProjectWeb.PageLive do
     {:ok, "Hello #{first_name}"}
   end
 
-  def add(a, b), do: a + b
+    def add(a, b), do: a + b
+    def divide(a, b), do: a / b
+
 
 end
 
