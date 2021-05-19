@@ -41,4 +41,18 @@ defmodule LiseProjectWeb.PageLive do
   def name("Lise" = name), do: "Hello #{name}"
   def name(_anyname), do: :error
 
+  def hello({:ok, name}) do
+    first_name =
+      case String.split(name, " ") do
+        [first_name, _middle_name, _last_name] -> first_name
+        [first_name, _last_name] -> first_name
+        [first_name] -> first_name
+      end
+
+    {:ok, "Hello #{first_name}"}
+  end
+
+  def add(a, b), do: a + b
+
 end
+
