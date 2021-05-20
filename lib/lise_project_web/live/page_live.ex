@@ -53,7 +53,7 @@ defmodule LiseProjectWeb.PageLive do
   end
 
     def add(a, b), do: a + b
-    def divide(a, b), do: a / b
+    def divide(a, b), do: div(a, b)
 
 
 end
