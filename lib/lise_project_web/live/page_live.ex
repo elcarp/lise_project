@@ -37,25 +37,11 @@ defmodule LiseProjectWeb.PageLive do
         do: {app, vsn}
   end
 
-  def name("Lise Carpenter" = name), do: "Hello #{name}"
-  def name("Annapurna" = name), do: "#{name}"
+  def name(a = name), do: "#{name}"
   def age(a = age), do: "#{age * 7}"
-  def breed("persian" = breed), do: "#{breed}"
+  def breed(a = breed), do: "#{breed}"
+
   def name(_anyname), do: :error
-
-  def hello({:ok, name}) do
-    first_name =
-      case String.split(name, " ") do
-        [first_name, _middle_name, _last_name] -> first_name
-        [first_name, _last_name] -> first_name
-        [first_name] -> first_name
-      end
-
-    {:ok, "Hello #{first_name}"}
-  end
-
-    def add(a, b), do: a + b
-    def divide(a, b), do: div(a, b)
 
 end
 
