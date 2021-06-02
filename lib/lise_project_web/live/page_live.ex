@@ -43,5 +43,9 @@ defmodule LiseProjectWeb.PageLive do
 
   def name(_anyname), do: :error
 
+  defdelegate new_cat(params), 
+    to: __MODULE__.Cat,
+    as: :new
+    
 end
 

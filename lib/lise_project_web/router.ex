@@ -18,6 +18,7 @@ defmodule LiseProjectWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/cat", CatLive
   end
 
   # Other scopes may use custom stacks.
