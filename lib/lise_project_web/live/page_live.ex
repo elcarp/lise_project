@@ -38,7 +38,9 @@ defmodule LiseProjectWeb.PageLive do
   end
 
   def name("Lise Carpenter" = name), do: "Hello #{name}"
-  def name("Lise" = name), do: "Hello #{name}"
+  def name("Annapurna" = name), do: "#{name}"
+  def age(a = age), do: "#{age * 7}"
+  def breed("persian" = breed), do: "#{breed}"
   def name(_anyname), do: :error
 
   def hello({:ok, name}) do
